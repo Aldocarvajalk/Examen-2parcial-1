@@ -1,0 +1,52 @@
+/* Modal Header */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px; /* Añadir un poco de relleno */
+}
+
+/* Título del modal */
+.modal-title {
+    font-size: 1.8rem; /* Tamaño de fuente más grande */
+    color: #333; /* Color más oscuro */
+}
+
+/* Modal Body */
+.modal-body {
+    text-align: center; /* Centrar el texto */
+}
+
+/* Imagen del Pokémon */
+.modal-body img {
+    max-width: 100%; /* Asegura que la imagen no se desborde */
+    height: auto; /* Mantener la proporción de la imagen */
+    border-radius: 10px; /* Bordes redondeados */
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+
+/* Estilo de los datos del Pokémon */
+.modal-body p {
+    font-size: 1.2rem; /* Tamaño de fuente más grande */
+    color: #555; /* Color gris más oscuro */
+    margin: 5px 0; /* Espaciado entre párrafos */
+}
+
+/* Habilidades, Tipos y Estadísticas */
+.modal-body h4 {
+    font-weight: bold; /* Negrita */
+    color: #007bff; /* Color azul */
+    margin-top: 20px; /* Espaciado superior */
+}
+
+/* Listas no ordenadas */
+.list-unstyled {
+    padding-left: 0; /* Sin padding */
+}
+
+/* Asegurarse de que cada columna sea flexible */
+.col-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar elementos en la columna */
+}

@@ -1,0 +1,45 @@
+<div *ngIf="recetas?.recetas?.length; else sinDatos">
+    <h1>Lista de Recetas</h1>
+    <button type="button" class="btn btn-success" (click)="modal.open()"> Agregar</button>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Título</th>
+                <th>Categoría</th>
+                <th>Tiempo de Preparación (min)</th>
+                <th>Autor</th>
+                <th>Ingredientes</th>
+                <th>Pasos</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let receta of recetas?.recetas">
+                <td>{{ receta.titulo }}</td>
+                <td>{{ receta.categoria }}</td>
+                <td>{{ receta.tiempoPreparacion }}</td>
+                <td>{{ receta.autor }}</td>
+                <td>
+                    <ul>
+                        <li *ngFor="let ingrediente of receta.ingredientes">{{ ingrediente }}</li>
+                    </ul>
+                </td>
+                <td>
+                    <ol>
+                        <li *ngFor="let paso of receta.pasos">{{ paso }}</li>
+                    </ol>
+                </td>
+
+                <td>
+                    <button class="btn btn-outline-success" type="button" (click)="modal2.open(receta)">Editar</button>
+                    <button class="btn btn-outline-danger" type="button">Eliminar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<ng-template #sinDatos>
+    <p>No hay recetas disponibles.</p>
+</ng-template>
+
+<app-modal-agregar (recetaAgregada)="actualizarElemento()"></app-modal-agregar>
+<app-modal-editar (recetaAgregada)="actualizarElemento()"></app-modal-editar>

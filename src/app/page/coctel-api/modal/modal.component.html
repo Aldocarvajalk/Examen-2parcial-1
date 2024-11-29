@@ -1,0 +1,37 @@
+<div class="modal fade" #modalElement tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content shadow-lg border-0">
+      <div class="modal-header bg-primary text-white">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">{{ coctel['strDrink'] }}</h1>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-6">
+            <img src="{{ coctel['strDrinkThumb'] }}" class="imagenprincipal d-block mx-auto img-fluid rounded-circle border border-4 border-light" alt="Imagen de {{ coctel['strDrink'] }}">
+          </div>
+          <div class="col-md-6">
+            <h5 class="mb-3">Detalles del Coctel</h5>
+            <p><strong>ID:</strong> {{ coctel['idDrink'] }}</p>
+            <p><strong>Categoría:</strong> {{ coctel['strCategory'] }}</p>
+            <p><strong>Tipo de Bebida:</strong> {{ coctel['strAlcoholic'] }}</p>
+            <p><strong>Se sirve en:</strong> {{ coctel['strGlass'] }}</p>
+
+            <div>
+              <h6><strong>Ingredientes</strong></h6>
+              <ul class="list-unstyled">
+                <li *ngFor="let i of getIngredients(coctel)">- {{ i }}</li>
+              </ul>
+            </div>
+
+            <h6><strong>Instrucciones</strong></h6>
+            <p>{{ coctel['strInstructionsES'] }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,90 @@
+/* Estilos generales de la fila */
+.row {
+    margin: 0 auto; /* Centrando la fila */
+}
+
+/* Estilo de las tarjetas de Pokémon */
+.card {
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Transiciones suaves */
+    overflow: hidden; /* Evita desbordamiento */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Efecto de elevación al pasar el ratón */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Sombra más intensa al hacer hover */
+}
+
+/* Estilo de la imagen del Pokémon */
+.card-img-top {
+    border-radius: 15px 15px 0 0; /* Bordes redondeados en la parte superior */
+    object-fit: cover; /* Mantiene la proporción de la imagen */
+    height: 176px; /* Altura fija para uniformidad */
+}
+
+/* Estilos del cuerpo de la tarjeta */
+.card-body {
+    text-align: center; /* Centra el texto */
+    padding: 15px; /* Espaciado interno */
+}
+
+/* Estilo del título del Pokémon */
+.card-title {
+    font-size: 1.5rem; /* Tamaño de fuente del título */
+    font-weight: bold; /* Negrita */
+    color: #333; /* Color del texto */
+    margin-bottom: 10px; /* Espaciado inferior */
+}
+
+/* Estilo del texto de base de experiencia */
+.card-text {
+    font-size: 1.1rem; /* Tamaño de fuente para la experiencia */
+    color: #666; /* Color más claro */
+    margin-bottom: 15px; /* Espaciado inferior */
+}
+
+/* Estilo del botón */
+.btn {
+    background-color: #007bff; /* Color de fondo azul */
+    border: none; /* Sin borde */
+    color: white; /* Texto en blanco */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espaciado interno del botón */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones suaves */
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Color más oscuro al pasar el ratón */
+    transform: translateY(-2px); /* Efecto de elevación al hacer hover */
+}
+
+/* Estilos del SVG de carga */
+svg {
+    display: block; /* Asegura que el SVG esté en un bloque */
+    margin: 0 auto; /* Centra el SVG */
+    width: 50px; /* Ancho fijo para el SVG */
+    height: 50px; /* Altura fija para el SVG */
+}
+
+/* Estilos de la alerta */
+.alert {
+    margin: 20px 0; /* Espaciado superior e inferior */
+    text-align: center; /* Centra el texto de la alerta */
+    font-size: 1.2rem; /* Tamaño de fuente más grande */
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .card {
+        width: 90%; /* Aumenta el ancho en pantallas pequeñas */
+    }
+
+    .card-title {
+        font-size: 1.2rem; /* Reduce el tamaño de fuente en pantallas pequeñas */
+    }
+
+    .card-text {
+        font-size: 1rem; /* Tamaño de fuente más pequeño */
+    }
+}

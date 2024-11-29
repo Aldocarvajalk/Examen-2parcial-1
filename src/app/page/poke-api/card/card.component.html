@@ -1,0 +1,45 @@
+<div class="row">
+  <ng-container *ngIf="
+      pokemonAll && pokemonAll.results && pokemonAll.results.length > 0;
+      else noPokemon
+    ">
+    <div class="card animate__bounce col-6 mx-auto mb-3" style="width: 300px"
+      *ngFor="let pokemon of pokemonAll.results">
+
+      <div *ngIf="!loadingImg">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" width="176"
+          height="176" style="shape-rendering: auto; display: block; background: rgb(255, 255, 255);"
+          xmlns:xlink="http://www.w3.org/1999/xlink">
+          <g>
+            <path style="transform:scale(0.87);transform-origin:50px 50px" stroke-linecap="round"
+              d="M24.3 30C11.4 30 5 43.3 5 50s6.4 20 19.3 20c19.3 0 32.1-40 51.4-40 C88.6 30 95 43.3 95 50s-6.4 20-19.3 20C56.4 70 43.6 30 24.3 30z"
+              stroke-dasharray="169.34869262695312 87.24023559570313" stroke-width="2" stroke="#0c9be9" fill="none">
+              <animate values="0;256.58892822265625" keyTimes="0;1" dur="1.8181818181818181s" repeatCount="indefinite"
+                attributeName="stroke-dashoffset"></animate>
+            </path>
+            <g></g>
+          </g>
+        </svg>
+      </div>
+
+      <img src="{{pokemon.data?.sprites?.other?.['official-artwork']?.front_default}}" class="card-img-top" alt="..."
+        loading="lazy" (load)="loadingImg = true" />
+
+      <div class="card-body">
+        <h5 class="card-title">{{ pokemon.name }}</h5>
+        <p class="card-text">{{ pokemon.data?.base_experience }}</p>
+        <li class="btn btn-primary mx-auto d-block" (click)="openModal(pokemon.data!)">Mas
+          Info</li>
+      </div>
+    </div>
+  </ng-container>
+  <ng-template #noPokemon>
+    <div class="col-12">
+      <div class="alert alert-warning">
+        <p>No hay pokemons</p>
+      </div>
+    </div>
+  </ng-template>
+</div>
+
+<app-modal></app-modal>

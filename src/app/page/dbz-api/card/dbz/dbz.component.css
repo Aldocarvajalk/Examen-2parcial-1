@@ -1,0 +1,44 @@
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.custom-card {
+  border: none; /* Eliminar borde por defecto */
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  transition: transform 0.3s, box-shadow 0.3s; /* Efecto de transición */
+}
+
+.custom-card:hover {
+  transform: translateY(-5px); /* Levantar la tarjeta al pasar el mouse */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al pasar el mouse */
+}
+
+.card-img-top {
+  width: auto; /* Ancho fijo de la imagen */
+  height: 300px; /* Alto fijo de la imagen */
+  border-radius: 15px 15px 0 0; /* Bordes redondeados en la parte superior */
+}
+
+.loading-svg {
+  display: block;
+  margin: 0 auto; /* Centrar el SVG de carga */
+}
+
+.card-body {
+  padding: 15px; /* Relleno interno del cuerpo de la tarjeta */
+}
+
+.btn-primary {
+  background-color: #007bff; /* Color de fondo del botón */
+  border: none; /* Sin borde en el botón */
+  border-radius: 25px; /* Bordes redondeados en el botón */
+  transition: background-color 0.3s, transform 0.2s; /* Transición en el color y tamaño */
+}
+
+.btn-primary:hover {
+  background-color: #0056b3; /* Color más oscuro al pasar el mouse */
+  transform: scale(1.05); /* Aumentar tamaño del botón al pasar el mouse */
+}

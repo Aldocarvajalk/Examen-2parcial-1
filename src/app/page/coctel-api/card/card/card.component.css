@@ -1,0 +1,20 @@
+.drink-card {
+  transition: transform 0.3s; /* Añadir transición suave */
+}
+
+.drink-card:hover {
+  transform: translateY(-5px); /* Sube ligeramente la tarjeta al pasar el mouse */
+}
+
+.drink-image {
+  width: 200px; /* Ancho de la imagen */
+  height: 200px; /* Alto de la imagen */
+  border-radius: 50%; /* Hacer la imagen circular */
+  object-fit: cover; /* Cubrir el área de la imagen */
+  margin: 20px auto; /* Centrar la imagen */
+  transition: transform 0.3s; /* Transición suave */
+}
+
+.drink-image:hover {
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño de la imagen al pasar el mouse */
+}

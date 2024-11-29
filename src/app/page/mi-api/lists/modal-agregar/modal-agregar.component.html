@@ -1,0 +1,45 @@
+<!-- Modal para agregar receta -->
+<div class="modal fade" #modalEleent id="modalAgregarReceta" tabindex="-1" aria-labelledby="modalAgregarRecetaLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalAgregarRecetaLabel">Agregar Receta</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form #recetaForm="ngForm" (ngSubmit)="agregarReceta(recetaForm)">
+                    <div class="mb-3">
+                        <label for="titulo" class="form-label">Título</label>
+                        <input type="text" id="titulo" class="form-control" name="titulo" ngModel required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="categoria" class="form-label">Categoría</label>
+                        <input type="text" id="categoria" class="form-control" name="categoria" ngModel required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="tiempoPreparacion" class="form-label">Tiempo de Preparación (min)</label>
+                        <input type="number" id="tiempoPreparacion" class="form-control" name="tiempoPreparacion"
+                            ngModel required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="autor" class="form-label">Autor</label>
+                        <input type="text" id="autor" class="form-control" name="autor" ngModel required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="ingredientes" class="form-label">Ingredientes</label>
+                        <textarea id="ingredientes" class="form-control" name="ingredientes" ngModel
+                            required></textarea>
+                        <small class="form-text text-muted">Separa los ingredientes con comas.</small>
+                    </div>
+                    <div class="mb-3">
+                        <label for="pasos" class="form-label">Pasos</label>
+                        <textarea id="pasos" class="form-control" name="pasos" ngModel required></textarea>
+                        <small class="form-text text-muted">Separa los pasos con comas.</small>
+                    </div>
+                    <button type="submit" class="btn btn-primary" [disabled]="!recetaForm.valid">Guardar Receta</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

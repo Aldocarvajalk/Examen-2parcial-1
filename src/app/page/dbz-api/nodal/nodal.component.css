@@ -1,0 +1,128 @@
+/* Ancho máximo del modal */
+.modal-lg {
+    max-width: 80%; /* Ajusta el ancho del modal al 80% de la pantalla */
+}
+
+/* Imagen por defecto */
+img {
+    max-width: 100%; /* Asegura que las imágenes sean responsivas */
+    height: auto; /* Mantiene la proporción */
+}
+
+/* Imagen principal del personaje */
+.principal img {
+    width: 290px;
+    height: auto; /* Cambiado a auto para mantener la proporción */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+/* Imagen del planeta */
+.planeta {
+    max-width: 150px; /* Ancho máximo */
+    height: 150px; /* Altura fija */
+    object-fit: cover; /* Mantiene la proporción de la imagen */
+    border-radius: 50%; /* Redondea la imagen en forma de círculo */
+}
+
+/* Modal general */
+.modal-content {
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Encabezado del modal */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 15px; /* Espaciado adicional */
+}
+
+.modal-title {
+    font-size: 1.8rem;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Botón de cerrar */
+.btn-close i {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+/* Imagen personalizada del personaje */
+.img-custom-size {
+    max-width: 100%; /* Responsiva */
+    height: auto; /* Mantiene la proporción */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra suave */
+}
+
+/* Información del personaje */
+.modal-body p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.modal-body h4 {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #007bff; /* Color azul para encabezados */
+}
+
+/* Sección de transformaciones */
+.personaje img {
+    max-width: 100px; /* Ancho fijo */
+    height: auto; /* Mantiene la proporción */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.personaje p {
+    font-weight: bold;
+    color: #555;
+}
+
+/* Ajustes de columnas */
+.col-6 {
+    padding: 10px; /* Espaciado alrededor de las columnas */
+}
+
+/* Ajustes de filas */
+.row {
+    margin-top: 20px; /* Espaciado entre filas */
+}
+
+.text-center {
+    text-align: center; /* Centra el texto */
+}
+
+.d-flex {
+    display: flex; /* Flexbox para alineación */
+}
+
+.align-items-center {
+    align-items: center; /* Alineación vertical */
+}
+
+/* Estilo adicional para el footer */
+.modal-footer {
+    border-top: 1px solid #e5e5e5; /* Línea superior para el footer */
+    padding-top: 15px; /* Espaciado adicional */
+}
+
+/* Botones en el footer */
+.modal-footer .btn-secondary {
+    background-color: #007bff; /* Color de fondo azul */
+    border: none; /* Sin borde */
+    color: white; /* Texto en blanco */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espaciado dentro del botón */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+.modal-footer .btn-secondary:hover {
+    background-color: #0056b3; /* Color más oscuro al pasar el ratón */
+}

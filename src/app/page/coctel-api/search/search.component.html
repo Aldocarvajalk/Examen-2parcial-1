@@ -1,0 +1,19 @@
+<div class="input-group mb-3">
+  <input 
+    type="text" 
+    class="form-control" 
+    placeholder="Ingrese el nombre del cóctel" 
+    aria-label="Ingrese el nombre del cóctel" 
+    #inputTermino 
+    (keydown.enter)="getTermin(inputTermino.value)" 
+    aria-describedby="button-addon2">
+  
+  <button 
+    class="btn btn-outline-primary" 
+    (click)="getTermin(inputTermino.value)" 
+    type="button" 
+    id="button-addon2">
+    <i class="bi bi-search"></i>
+  </button>
+</div>
+

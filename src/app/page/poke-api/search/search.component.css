@@ -1,0 +1,28 @@
+/* General Input Group Styles */
+.input-group {
+  max-width: 600px; /* Limitar el ancho máximo del grupo de entrada */
+  margin: 0 auto; /* Centrar el grupo de entrada */
+}
+
+.input-group .form-control {
+  border-radius: 25px 0 0 25px; /* Bordes redondeados para el input */
+  padding: 15px; /* Relleno interno para mayor comodidad */
+  transition: box-shadow 0.3s; /* Efecto de transición */
+}
+
+.input-group .form-control:focus {
+  box-shadow: 0 0 5px rgba(13, 110, 253, 0.5); /* Sombra al hacer foco */
+  border-color: #0d6efd; /* Cambio de color del borde al hacer foco */
+}
+
+.input-group .btn {
+  border-radius: 0 25px 25px 0; /* Bordes redondeados para el botón */
+  padding: 15px; /* Relleno interno para el botón */
+  transition: background-color 0.3s, transform 0.2s; /* Efectos de transición */
+}
+
+.input-group .btn:hover {
+  background-color: #0d6efd; /* Color de fondo al pasar el mouse */
+  color: white; /* Color del texto al pasar el mouse */
+  transform: scale(1.05); /* Aumento de tamaño al pasar el mouse */
+}
